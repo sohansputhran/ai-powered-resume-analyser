@@ -1,0 +1,35 @@
+# Core Streamlit and web framework
+streamlit==1.29.0
+streamlit-ace==0.1.1
+
+# AI and LangChain dependencies
+langchain==0.1.0
+langchain-google-genai==0.0.6
+google-generativeai==0.3.2
+
+# File processing
+PyPDF2==3.0.1
+python-docx==0.8.11
+
+# Data visualization
+plotly==5.17.0
+pandas==2.1.4
+
+# Environment and configuration
+python-dotenv==1.0.0
+
+# Utility libraries
+pyperclip==1.8.2
+regex==2023.10.3
+
+# Optional: For enhanced text processing
+nltk==3.8.1
+spacy==3.7.2
+
+# Optional: For better PDF handling
+pdfplumber==0.10.3
+pymupdf==1.23.8
+
+# Testing (optional)
+# pytest==7.4.3
+# pytest-streamlit==1.0.0
