@@ -58,8 +58,7 @@ An intelligent Streamlit application that uses **Google Gemini API** and **LangC
 
 4. **Set up environment variables**
    ```bash
-   cp .env.example .env
-   # Edit .env and add your Google Gemini API key:
+   # Create .env file and add your Google Gemini API key:
    # GOOGLE_API_KEY=your_actual_api_key_here
    ```
 
