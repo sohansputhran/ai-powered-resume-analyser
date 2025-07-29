@@ -4,7 +4,6 @@ from typing import Dict, List, Optional
 import json
 import time
 from config.settings import GEMINI_CONFIG
-
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -21,11 +20,33 @@ class GeminiService:
         # Configure Gemini
         genai.configure(api_key=self.api_key)
         
-        # Initialize model
-        self.model = genai.GenerativeModel(
-            model_name=GEMINI_CONFIG['model_name'],
-            generation_config=GEMINI_CONFIG['generation_config']
-        )
+        # Try different model names (Google has been updating these)
+        model_names_to_try = [
+            "gemini-1.5-flash",
+            "gemini-1.5-pro", 
+            "models/gemini-1.5-flash",
+            "models/gemini-1.5-pro",
+            "gemini-pro"
+        ]
+        
+        self.model = None
+        for model_name in model_names_to_try:
+            try:
+                self.model = genai.GenerativeModel(
+                    model_name=model_name,
+                    generation_config=GEMINI_CONFIG['generation_config']
+                )
+                # Test the model with a simple query
+                test_response = self.model.generate_content("Test")
+                if test_response:
+                    print(f"✅ Successfully initialized model: {model_name}")
+                    break
+            except Exception as e:
+                print(f"❌ Failed to initialize {model_name}: {str(e)}")
+                continue
+        
+        if not self.model:
+            raise ValueError("Could not initialize any Gemini model. Please check your API key and available models.")
         
         # Rate limiting
         self.last_request_time = 0
