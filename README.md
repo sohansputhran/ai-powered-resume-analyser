@@ -22,7 +22,7 @@ An intelligent Streamlit application that uses **Google Gemini API** and **LangC
 
 ## 🎬 Demo
 
-![Resume Analyser Demo](demo.gif)
+![Resume Analyser Demo](assets/demo_screenshot.png)
 
 *Upload resume → Analyze with AI → Get tailored recommendations → Download optimized version*
 
