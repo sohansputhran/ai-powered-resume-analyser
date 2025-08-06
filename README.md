@@ -36,7 +36,7 @@ An intelligent Streamlit application that uses **Google Gemini API** and **LangC
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ai-powered-resume-analyser.git
+   git clone https://github.com/sohansputhran/ai-powered-resume-analyser.git
    cd ai-powered-resume-analyser
    ```
 
@@ -281,7 +281,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have questions:
 
-1. Check the [Issues](https://github.com/yourusername/ai-powered-resume-analyser/issues) page
+1. Check the [Issues](https://github.com/sohansputhran/ai-powered-resume-analyser/issues) page
 2. Run `python check_models.py` to debug API issues
 3. Review the troubleshooting section above
 4. Create a new issue with detailed information
